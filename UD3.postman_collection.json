@@ -1,0 +1,722 @@
+{
+    "info": {
+        "name": "IG Formacion API",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Alumnos",
+            "item": [
+                {
+                    "name": "Get all alumnos",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/alumnos",
+                            "protocol": "http",
+                            "host": [
+                                "127.0.0.1"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "alumnos"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Get alumno by ID",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/alumnos/:id",
+                            "protocol": "http",
+                            "host": [
+                                "127.0.0.1"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "alumnos",
+                                ":id"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Create alumno",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"nombre\": \"Nuevo Alumno\",\n  \"email\": \"nuevo.alumno@example.com\",\n  \"telefono\": \"123456789\"\n}"
+                        },
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/alumnos",
+                            "protocol": "http",
+                            "host": [
+                                "127.0.0.1"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "alumnos"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Update alumno",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"nombre\": \"Alumno Modificado\",\n  \"email\": \"modificado@example.com\"\n}"
+                        },
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/alumnos/:id",
+                            "protocol": "http",
+                            "host": [
+                                "127.0.0.1"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "alumnos",
+                                ":id"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Delete alumno",
+                    "request": {
+                        "method": "DELETE",
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/alumnos/:id",
+                            "protocol": "http",
+                            "host": [
+                                "127.0.0.1"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "alumnos",
+                                ":id"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Obtener cursos de un alumno",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/alumnos/:alumno/cursos",
+                            "protocol": "http",
+                            "host": [
+                                "127.0.0.1"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "alumnos",
+                                ":alumno",
+                                "cursos"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Inscribir alumno en curso",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/alumnos/:alumno/cursos/:curso",
+                            "protocol": "http",
+                            "host": [
+                                "127.0.0.1"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "alumnos",
+                                ":alumno",
+                                "cursos",
+                                ":curso"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Eliminar inscripci\u00f3n de un curso",
+                    "request": {
+                        "method": "DELETE",
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/alumnos/:alumno/cursos/:curso",
+                            "protocol": "http",
+                            "host": [
+                                "127.0.0.1"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "alumnos",
+                                ":alumno",
+                                "cursos",
+                                ":curso"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Profesores",
+            "item": [
+                {
+                    "name": "Get all profesores",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/profesores",
+                            "protocol": "http",
+                            "host": [
+                                "127.0.0.1"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "profesores"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Get profesor by ID",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/profesores/:id",
+                            "protocol": "http",
+                            "host": [
+                                "127.0.0.1"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "profesores",
+                                ":id"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Create profesor",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"nombre\": \"Nuevo Profesor\",\n  \"email\": \"nuevo.profesor@example.com\"\n}"
+                        },
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/profesores",
+                            "protocol": "http",
+                            "host": [
+                                "127.0.0.1"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "profesores"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Update profesor",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"nombre\": \"Profesor Modificado\",\n  \"email\": \"modificado@example.com\"\n}"
+                        },
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/profesores/:id",
+                            "protocol": "http",
+                            "host": [
+                                "127.0.0.1"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "profesores",
+                                ":id"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Delete profesor",
+                    "request": {
+                        "method": "DELETE",
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/profesores/:id",
+                            "protocol": "http",
+                            "host": [
+                                "127.0.0.1"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "profesores",
+                                ":id"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Cursos",
+            "item": [
+                {
+                    "name": "Get all cursos",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/cursos",
+                            "protocol": "http",
+                            "host": [
+                                "127.0.0.1"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "cursos"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Get curso by ID",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/cursos/:id",
+                            "protocol": "http",
+                            "host": [
+                                "127.0.0.1"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "cursos",
+                                ":id"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Create curso",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"nombre\": \"Nuevo Curso\"\n}"
+                        },
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/cursos",
+                            "protocol": "http",
+                            "host": [
+                                "127.0.0.1"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "cursos"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Update curso",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"nombre\": \"Curso Modificado\"\n}"
+                        },
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/cursos/:id",
+                            "protocol": "http",
+                            "host": [
+                                "127.0.0.1"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "cursos",
+                                ":id"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Delete curso",
+                    "request": {
+                        "method": "DELETE",
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/cursos/:id",
+                            "protocol": "http",
+                            "host": [
+                                "127.0.0.1"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "cursos",
+                                ":id"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Inscribir alumno en curso",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/cursos/:curso_id/alumnos/:alumno_id",
+                            "protocol": "http",
+                            "host": [
+                                "127.0.0.1"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "cursos",
+                                ":curso_id",
+                                "alumnos",
+                                ":alumno_id"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Eliminar alumno de curso",
+                    "request": {
+                        "method": "DELETE",
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/cursos/:curso_id/alumnos/:alumno_id",
+                            "protocol": "http",
+                            "host": [
+                                "127.0.0.1"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "cursos",
+                                ":curso_id",
+                                "alumnos",
+                                ":alumno_id"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Obtener alumnos en un curso",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/cursos/:curso/alumnos",
+                            "protocol": "http",
+                            "host": [
+                                "127.0.0.1"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "cursos",
+                                ":curso",
+                                "alumnos"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Matr\u00edculas",
+            "item": [
+                {
+                    "name": "Get all matriculas",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/matriculas",
+                            "protocol": "http",
+                            "host": [
+                                "127.0.0.1"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "matriculas"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Get matr\u00edcula by ID",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/matriculas/:id",
+                            "protocol": "http",
+                            "host": [
+                                "127.0.0.1"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "matriculas",
+                                ":id"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Create matr\u00edcula",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"alumno_id\": 1,\n  \"asignatura_id\": 3\n}"
+                        },
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/matriculas",
+                            "protocol": "http",
+                            "host": [
+                                "127.0.0.1"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "matriculas"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Update matr\u00edcula",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"alumno_id\": 1,\n  \"asignatura_id\": 3\n}"
+                        },
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/matriculas/:id",
+                            "protocol": "http",
+                            "host": [
+                                "127.0.0.1"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "matriculas",
+                                ":id"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Delete matr\u00edcula",
+                    "request": {
+                        "method": "DELETE",
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/matriculas/:id",
+                            "protocol": "http",
+                            "host": [
+                                "127.0.0.1"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "matriculas",
+                                ":id"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Notas",
+            "item": [
+                {
+                    "name": "Get all notas",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/notas",
+                            "protocol": "http",
+                            "host": [
+                                "127.0.0.1"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "notas"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Get nota by ID",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/notas/:id",
+                            "protocol": "http",
+                            "host": [
+                                "127.0.0.1"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "notas",
+                                ":id"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Create nota",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"alumno_id\": 1,\n  \"asignatura_id\": 3,\n  \"calificacion\": 9\n}"
+                        },
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/notas",
+                            "protocol": "http",
+                            "host": [
+                                "127.0.0.1"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "notas"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Update nota",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"calificacion\": 7\n}"
+                        },
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/notas/:id",
+                            "protocol": "http",
+                            "host": [
+                                "127.0.0.1"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "notas",
+                                ":id"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Delete nota",
+                    "request": {
+                        "method": "DELETE",
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/notas/:id",
+                            "protocol": "http",
+                            "host": [
+                                "127.0.0.1"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "notas",
+                                ":id"
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
